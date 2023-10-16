@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmesApi</name>
+    </assembly>
+    <members>
+        <member name="M:FilmesApi.Controllers.FilmesApiController.AdicionaFilme(FilmesApi.Data.Dtos.CreateFilmeDto)">
+            <summary>
+            Método usado para adicionar um novo filme ao banco de dados
+            </summary>
+            <param name="filmeDto">Objeto JSON que representa um filme, vindo diretamente do Body HTTP</param>
+            <returns>Retorna o filme criado</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesApiController.RecuperaFilmes(System.Int32,System.Int32)">
+            <summary>
+            Método responsavel para recuperar todos os filmes da lista de filmes dentro do banco de dados.
+            </summary>
+            <param name="skip">Serve para pular posições, valor default caso não preencha.</param>
+            <param name="take">Serve para dizer quantas posições ler, valor default caso não preencha.</param>
+            <returns>Retorna uma lista de filmes</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesApiController.RecuperarFilmePorID(System.Int32)">
+            <summary>
+            Busca um filme baseado na sua chave de acesso unica
+            </summary>
+            <param name="id">Identificador unico do filme</param>
+            <returns>Retorna um filme caso exista.</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesApiController.AtualizarFilme(System.Int32,FilmesApi.Data.Dtos.UpdateFilmeDto)">
+            <summary>
+            Atualiza TODAS as informações de um filme, baseado no seu ID unico 
+            </summary>
+            <param name="id">Id unico do filme</param>
+            <param name="newInfoFilme">Novas informações do filme, deve-se passar todos os parametros</param>
+            <returns>Não há retornos</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesApiController.AtualizarFilmeParcialmente(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FilmesApi.Data.Dtos.UpdateFilmeDto})">
+            <summary>
+            Atualiza UMA INFORMAÇÃO ou mais do filme em questão
+            </summary>
+            <param name="id">identificador unico do filme que estamos ajusta</param>
+            <param name="patchFilme">Campos que vamos atualizar</param>
+            <returns>Não há retornos</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.FilmesApiController.DeletarFilme(System.Int32)">
+            <summary>
+            Deleta um filme baseado no seu ID
+            </summary>
+            <param name="id">Identificador unico do filme</param>
+            <returns>Não há retornos</returns>
+        </member>
+        <member name="T:FilmesApi.Migrations.CriandoTabelasDeDados">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesApi.Migrations.CriandoTabelasDeDados.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesApi.Migrations.CriandoTabelasDeDados.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesApi.Migrations.CriandoTabelasDeDados.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
